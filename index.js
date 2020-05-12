@@ -27,9 +27,7 @@ const createPokemon = (pokemon) => {
     <div class="pokemon-wrapper">
       <img class="pokemon-image" src="${pokemon.imageUrl}" alt="">
       <div class="details">
-      <div class="pokemon-name">
       <h3>Name: ${pokemon.name}</h3>
-      </div>
         <p class="supertype">Supertype: ${pokemon.supertype}</p>
         <p>HP: ${pokemon.hp || 0}</p>
         <p>Subtype: ${pokemon.subtype}</p>

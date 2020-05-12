@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 li {
@@ -23,7 +25,7 @@ li {
 }
 
 .details {
-  background-color: rgb(255, 204, 102);
+  background-color: whitesmoke;
   position: absolute;
   top: 0.4em;
   width: 95%;
@@ -35,15 +37,15 @@ li {
   padding-bottom: 0;
 }
 
-/* .pokemon-name {
-  background-color: khaki;
-  padding: 1em 0;
-  margin-top: -1em;
-  width: 50%;
-  display: inline-block;
-} */
-
 .pokemon-wrapper:hover .details {
   transform: initial;
   transition: 1s;
+}
+
+@media only screen and (max-width: 500px) {
+  .pokemon-cards {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+  }
 }
