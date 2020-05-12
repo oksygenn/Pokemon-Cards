@@ -21,21 +21,27 @@ const renderPokemons = () => {
 };
 
 const createPokemon = (pokemon) => {
-  const pokemonUl = document.createElement("ul");
-  pokemonUl.innerHTML = `
-    <li class="pokemon-image"><img src="${pokemon.imageUrl}" alt=""></li>
-    <li class="name">Name: ${pokemon.name}</li> 
-    <li class="nationalPokedexNumber">${pokemon.nationalPokedexNumber}</li>
-    <li class="type">${pokemon.types}</li>
-    <li class="supertype">${pokemon.supertype}</li>
-    <li>${pokemon.subtype}</li>
-    <li>${pokemon.hp}</li>
-    <li>${pokemon.number}</li>
-    <li>${pokemon.rarity}</li>
-    <li>${pokemon.series}</li>
-    <li>${pokemon.set}</li>
+  const pokemonLi = document.createElement("li");
+  pokemonLi.className = "pokemon";
+  pokemonLi.innerHTML = `
+    <div class="pokemon-wrapper">
+      <img class="pokemon-image" src="${pokemon.imageUrl}" alt="">
+      <div class="details">
+      <div class="pokemon-name">
+      <h3>Name: ${pokemon.name}</h3>
+      </div>
+        <p class="supertype">Supertype: ${pokemon.supertype}</p>
+        <p>HP: ${pokemon.hp || 0}</p>
+        <p>Subtype: ${pokemon.subtype}</p>
+        <p>Number: ${pokemon.number}</p>
+        <p>Rarity: ${pokemon.rarity}</p>
+        <p>Series: ${pokemon.series}</p>
+        <p>Set: ${pokemon.set}</p>
+      </div>
+    </div>
+   
   `;
-  return pokemonUl;
+  return pokemonLi;
 };
 
 main();
