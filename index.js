@@ -1,11 +1,8 @@
+import { getJSON } from "./api.js";
 const baseURL = "https://api.pokemontcg.io/v1";
 const pokemonCards = document.querySelector(".pokemon-cards");
 
 let pokemons = [];
-
-const getJSON = async (url) => {
-  return await fetch(url).then((response) => response.json());
-};
 
 const main = async () => {
   const allPokemonCards = await getJSON(`${baseURL}/cards`);
